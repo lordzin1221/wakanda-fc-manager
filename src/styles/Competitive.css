@@ -1,0 +1,448 @@
+.competitive {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.competitive-header {
+  background: linear-gradient(135deg, #1a1a1a 0%, #2a1a3a 100%);
+  border-bottom: 3px solid var(--accent-color);
+  padding: 20px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.header-info h1 {
+  font-size: 1.8rem;
+  color: var(--accent-color);
+  margin: 0;
+}
+
+.header-info p {
+  color: var(--secondary-color);
+  margin: 5px 0 0 0;
+}
+
+.header-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.nav-btn {
+  padding: 10px 16px;
+  font-size: 0.9rem;
+  background-color: var(--secondary-color);
+  color: var(--text-light);
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.nav-btn:hover {
+  background-color: var(--accent-color);
+  color: var(--text-dark);
+}
+
+.nav-btn.logout {
+  background-color: #d32f2f;
+}
+
+.competitive-main {
+  flex: 1;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 40px 20px;
+}
+
+.stats-overview {
+  margin-bottom: 50px;
+}
+
+.stats-overview h2 {
+  font-size: 2rem;
+  margin-bottom: 25px;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 15px;
+}
+
+.stat-box {
+  background-color: var(--card-bg);
+  border: 2px solid var(--accent-color);
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.stat-box:hover {
+  background-color: var(--hover-bg);
+  box-shadow: 0 4px 12px rgba(212, 175, 55, 0.2);
+  transform: translateY(-5px);
+}
+
+.stat-box h3 {
+  font-size: 0.9rem;
+  color: var(--secondary-color);
+  margin-bottom: 10px;
+}
+
+.big-number {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: var(--accent-color);
+  margin: 0;
+}
+
+.tournaments-section {
+  margin-bottom: 50px;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.section-header h2 {
+  font-size: 2rem;
+  margin: 0;
+}
+
+.btn-register {
+  padding: 12px 24px;
+  background-color: var(--secondary-color);
+  color: var(--text-light);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-register:hover {
+  background-color: var(--accent-color);
+  color: var(--text-dark);
+}
+
+.registration-form {
+  background-color: var(--card-bg);
+  border: 2px solid var(--secondary-color);
+  border-radius: 12px;
+  padding: 25px;
+  margin-bottom: 25px;
+}
+
+.registration-form h3 {
+  margin-bottom: 20px;
+}
+
+.registration-form form {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group label {
+  font-weight: 600;
+  color: var(--text-light);
+}
+
+.form-group select,
+.form-group textarea {
+  background-color: var(--primary-color);
+  color: var(--text-light);
+  border: 2px solid var(--border-color);
+  border-radius: 8px;
+  padding: 10px;
+  font-size: 0.95rem;
+  font-family: inherit;
+}
+
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--secondary-color);
+}
+
+.btn-submit {
+  grid-column: 1 / -1;
+  padding: 12px 24px;
+  background-color: var(--accent-color);
+  color: var(--text-dark);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-submit:hover {
+  background-color: var(--secondary-color);
+  color: var(--text-light);
+}
+
+.tournaments-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.tournament-card {
+  background-color: var(--card-bg);
+  border: 2px solid var(--border-color);
+  border-radius: 12px;
+  padding: 25px;
+  transition: all 0.3s ease;
+}
+
+.tournament-card:hover {
+  background-color: var(--hover-bg);
+  box-shadow: 0 4px 12px rgba(212, 175, 55, 0.2);
+  transform: translateY(-5px);
+}
+
+.tournament-card.upcoming {
+  border-left: 4px solid #2196f3;
+}
+
+.tournament-card.ongoing {
+  border-left: 4px solid #ff9800;
+}
+
+.tournament-card.finished {
+  border-left: 4px solid #4caf50;
+}
+
+.tournament-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 15px;
+}
+
+.tournament-header h3 {
+  font-size: 1.2rem;
+  margin: 0;
+  flex: 1;
+}
+
+.status {
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.status.upcoming {
+  background-color: rgba(33, 150, 243, 0.2);
+  color: #2196f3;
+}
+
+.status.ongoing {
+  background-color: rgba(255, 152, 0, 0.2);
+  color: #ff9800;
+}
+
+.status.finished {
+  background-color: rgba(76, 175, 80, 0.2);
+  color: #4caf50;
+}
+
+.tournament-info {
+  margin-bottom: 15px;
+}
+
+.tournament-info p {
+  margin: 8px 0;
+  color: var(--text-light);
+}
+
+.btn-details {
+  width: 100%;
+  padding: 10px;
+  background-color: var(--secondary-color);
+  color: var(--text-light);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-details:hover {
+  background-color: var(--accent-color);
+  color: var(--text-dark);
+}
+
+.training-section {
+  margin-bottom: 50px;
+}
+
+.training-section h2 {
+  font-size: 2rem;
+  margin-bottom: 25px;
+}
+
+.training-schedule {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.training-card {
+  background-color: var(--card-bg);
+  border: 2px solid var(--accent-color);
+  border-radius: 12px;
+  padding: 25px;
+  transition: all 0.3s ease;
+}
+
+.training-card:hover {
+  background-color: var(--hover-bg);
+  box-shadow: 0 4px 12px rgba(212, 175, 55, 0.2);
+  transform: translateY(-5px);
+}
+
+.training-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+}
+
+.training-card p {
+  margin: 10px 0;
+  color: var(--text-light);
+}
+
+.resources-section {
+  margin-bottom: 50px;
+}
+
+.resources-section h2 {
+  font-size: 2rem;
+  margin-bottom: 25px;
+}
+
+.resources-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.resource-card {
+  background-color: var(--card-bg);
+  border: 2px solid var(--border-color);
+  border-radius: 12px;
+  padding: 25px;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.resource-card:hover {
+  background-color: var(--hover-bg);
+  box-shadow: 0 4px 12px rgba(212, 175, 55, 0.2);
+  transform: translateY(-5px);
+}
+
+.resource-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.resource-card p {
+  flex: 1;
+  color: var(--text-light);
+  margin-bottom: 15px;
+}
+
+.btn-resource {
+  padding: 10px 20px;
+  background-color: var(--secondary-color);
+  color: var(--text-light);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-resource:hover {
+  background-color: var(--accent-color);
+  color: var(--text-dark);
+}
+
+.competitive-footer {
+  background-color: var(--primary-color);
+  border-top: 3px solid var(--accent-color);
+  padding: 20px;
+  text-align: center;
+  margin-top: auto;
+}
+
+.competitive-footer p {
+  margin: 8px 0;
+  color: var(--accent-color);
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .header-content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .header-actions {
+    width: 100%;
+  }
+
+  .section-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .tournaments-list,
+  .training-schedule,
+  .resources-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .registration-form form {
+    grid-template-columns: 1fr;
+  }
+
+  .btn-submit {
+    grid-column: 1;
+  }
+}

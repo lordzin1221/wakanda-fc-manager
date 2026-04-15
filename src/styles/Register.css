@@ -1,0 +1,220 @@
+.register-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0f0f0f 0%, #1a0f2e 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.register-card {
+  background-color: var(--card-bg);
+  border: 2px solid var(--accent-color);
+  border-radius: 12px;
+  padding: 40px;
+  max-width: 600px;
+  width: 100%;
+  box-shadow: 0 8px 32px rgba(212, 175, 55, 0.2);
+}
+
+.register-header {
+  text-align: center;
+  margin-bottom: 40px;
+  border-bottom: 2px solid var(--accent-color);
+  padding-bottom: 20px;
+}
+
+.register-logo {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 2px solid var(--accent-color);
+  margin-bottom: 15px;
+  object-fit: cover;
+}
+
+.register-header h1 {
+  font-size: 2rem;
+  color: var(--accent-color);
+  margin-bottom: 10px;
+}
+
+.register-header p {
+  color: var(--secondary-color);
+  font-size: 1.1rem;
+}
+
+.register-form {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.form-section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-section h2 {
+  font-size: 1.3rem;
+  color: var(--accent-color);
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 10px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group label {
+  font-weight: 600;
+  color: var(--text-light);
+  font-size: 0.95rem;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  background-color: var(--primary-color);
+  color: var(--text-light);
+  border: 2px solid var(--border-color);
+  border-radius: 8px;
+  padding: 12px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  font-family: inherit;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--secondary-color);
+  box-shadow: 0 0 0 3px rgba(157, 78, 221, 0.1);
+  background-color: var(--hover-bg);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.error {
+  color: #ff6b6b;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.form-actions {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.btn-submit,
+.btn-cancel {
+  flex: 1;
+  padding: 14px 24px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-submit {
+  background-color: var(--accent-color);
+  color: var(--text-dark);
+}
+
+.btn-submit:hover {
+  background-color: var(--secondary-color);
+  color: var(--text-light);
+  transform: translateY(-2px);
+}
+
+.btn-cancel {
+  background-color: transparent;
+  color: var(--accent-color);
+  border: 2px solid var(--accent-color);
+}
+
+.btn-cancel:hover {
+  background-color: var(--accent-color);
+  color: var(--text-dark);
+}
+
+.form-note {
+  font-size: 0.85rem;
+  color: var(--secondary-color);
+  text-align: center;
+  margin-top: 20px;
+}
+
+.success-message {
+  background-color: var(--card-bg);
+  border: 2px solid var(--accent-color);
+  border-radius: 12px;
+  padding: 60px 40px;
+  text-align: center;
+  max-width: 600px;
+  box-shadow: 0 8px 32px rgba(212, 175, 55, 0.2);
+}
+
+.success-message h1 {
+  font-size: 2.5rem;
+  color: var(--accent-color);
+  margin-bottom: 20px;
+}
+
+.success-message p {
+  font-size: 1.1rem;
+  color: var(--text-light);
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+.btn-success {
+  background-color: var(--accent-color);
+  color: var(--text-dark);
+  padding: 14px 40px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 30px;
+}
+
+.btn-success:hover {
+  background-color: var(--secondary-color);
+  color: var(--text-light);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 600px) {
+  .register-card {
+    padding: 25px;
+  }
+
+  .register-header h1 {
+    font-size: 1.5rem;
+  }
+
+  .form-actions {
+    flex-direction: column;
+  }
+
+  .success-message {
+    padding: 40px 25px;
+  }
+
+  .success-message h1 {
+    font-size: 1.8rem;
+  }
+}

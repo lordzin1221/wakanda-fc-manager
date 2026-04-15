@@ -1,0 +1,108 @@
+{
+  "name": "Wakanda FC Manager",
+  "short_name": "Wakanda FC",
+  "description": "Gestão Colaborativa e Inclusiva de Patotas de Futebol Feminino",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#0f0f0f",
+  "theme_color": "#d4af37",
+  "icons": [
+    {
+      "src": "/wakanda-logo.png",
+      "sizes": "72x72",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/wakanda-logo.png",
+      "sizes": "96x96",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/wakanda-logo.png",
+      "sizes": "128x128",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/wakanda-logo.png",
+      "sizes": "144x144",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/wakanda-logo.png",
+      "sizes": "152x152",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/wakanda-logo.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/wakanda-logo.png",
+      "sizes": "384x384",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/wakanda-logo.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/wakanda-logo.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/wakanda-logo.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "categories": ["sports", "social"],
+  "screenshots": [
+    {
+      "src": "/wakanda-logo.png",
+      "sizes": "540x720",
+      "type": "image/png",
+      "form_factor": "narrow"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Dashboard",
+      "short_name": "Dashboard",
+      "description": "Acesse o dashboard de jogos",
+      "url": "/dashboard",
+      "icons": [
+        {
+          "src": "/wakanda-logo.png",
+          "sizes": "192x192"
+        }
+      ]
+    },
+    {
+      "name": "Comunicação",
+      "short_name": "Chat",
+      "description": "Acesse o chat e fórum",
+      "url": "/communication",
+      "icons": [
+        {
+          "src": "/wakanda-logo.png",
+          "sizes": "192x192"
+        }
+      ]
+    }
+  ]
+}
