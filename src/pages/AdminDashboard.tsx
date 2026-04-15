@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import '../styles/AdminDashboard.css';
+import { generateReport } from '../services/reportGenerator';
 
 interface AdminDashboardProps {
   adminName: string;
@@ -70,6 +71,15 @@ export default function AdminDashboard({ adminName, onNavigate, onLogout }: Admi
     setUsers(users.map(u =>
       u.id === id ? { ...u, status: u.status === 'active' ? 'inactive' : 'active' } : u
     ));
+  };
+
+  const handleGenerateReport = (type: string) => {
+    generateReport(type, {
+      totalUsers: stats.totalUsers,
+      activeUsers: stats.activeUsers,
+      totalGames: stats.totalGames,
+      totalMessages: stats.totalMessages,
+    });
   };
 
   return (
@@ -284,22 +294,22 @@ export default function AdminDashboard({ adminName, onNavigate, onLogout }: Admi
                 <div className="report-card">
                   <h3>📊 Relatório de Usuárias</h3>
                   <p>Análise completa de cadastros, atividades e engajamento</p>
-                  <button className="btn-report">Gerar Relatório</button>
+                  <button className="btn-report" onClick={() => handleGenerateReport('users')}>Gerar Relatório</button>
                 </div>
                 <div className="report-card">
                   <h3>⚽ Relatório de Jogos</h3>
                   <p>Estatísticas de jogos, presença e desempenho</p>
-                  <button className="btn-report">Gerar Relatório</button>
+                  <button className="btn-report" onClick={() => handleGenerateReport('games')}>Gerar Relatório</button>
                 </div>
                 <div className="report-card">
                   <h3>💬 Relatório de Comunicação</h3>
                   <p>Análise de mensagens, fórum e engajamento</p>
-                  <button className="btn-report">Gerar Relatório</button>
+                  <button className="btn-report" onClick={() => handleGenerateReport('communication')}>Gerar Relatório</button>
                 </div>
                 <div className="report-card">
                   <h3>📈 Relatório de Crescimento</h3>
                   <p>Evolução da plataforma ao longo do tempo</p>
-                  <button className="btn-report">Gerar Relatório</button>
+                  <button className="btn-report" onClick={() => handleGenerateReport('growth')}>Gerar Relatório</button>
                 </div>
               </div>
             </section>
